@@ -279,4 +279,4 @@ Built with inspiration from:
 
 ---
 
-<p align="center">Made with ❤️ by the ComponentUI team</p>
+<p align="center">Made with ❤️ by Emilien Dubois</p>
