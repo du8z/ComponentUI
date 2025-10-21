@@ -51,7 +51,7 @@ function App() {
 
 ## Documentation
 
-Visit our [Storybook documentation](https://yourusername.github.io/componentui) for:
+Visit our [Storybook documentation](https://github.com/du8z/ComponentUI.git) for:
 
 - 📖 Component API documentation
 - 🎨 Interactive examples
@@ -113,8 +113,8 @@ ComponentUI/
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/yourusername/componentui.git
-   cd componentui
+   git clone https://github.com/du8z/ComponentUI.git
+   cd ComponentUI
    ```
 
 2. **Install dependencies**
