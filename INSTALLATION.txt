@@ -1,0 +1,109 @@
+╔══════════════════════════════════════════════════════════════════════════╗
+║                                                                          ║
+║                    📦 ComponentUI - Installation Guide                   ║
+║                                                                          ║
+╚══════════════════════════════════════════════════════════════════════════╝
+
+STEP 1: Install pnpm (if not already installed)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Choose one method:
+
+  Option A - Using npm:
+    $ npm install -g pnpm
+
+  Option B - Using Homebrew (macOS):
+    $ brew install pnpm
+
+  Option C - Using curl:
+    $ curl -fsSL https://get.pnpm.io/install.sh | sh -
+
+  Verify installation:
+    $ pnpm --version
+
+
+STEP 2: Install Project Dependencies
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Method A - Using install script (recommended):
+    $ ./install.sh
+
+  Method B - Manual installation:
+    $ pnpm install
+
+
+STEP 3: Verify Installation
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Start Storybook to verify everything works:
+    $ pnpm dev:docs
+
+  Open your browser to:
+    → http://localhost:6006
+
+
+TROUBLESHOOTING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ❌ Problem: "pnpm: command not found"
+     Solution: Install pnpm using one of the methods in Step 1
+
+  ❌ Problem: "Node version too old"
+     Solution: Install Node.js >= 18.0.0 from https://nodejs.org/
+
+  ❌ Problem: Dependencies fail to install
+     Solution: 
+       $ pnpm clean
+       $ rm -rf node_modules
+       $ pnpm install
+
+  ❌ Problem: Storybook won't start
+     Solution:
+       $ cd packages/docs
+       $ rm -rf node_modules/.cache
+       $ pnpm storybook
+
+
+WHAT'S NEXT?
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  ✅ Installation complete!
+  
+  Read NEXT_STEPS.md for guidance on:
+    • Creating your first component
+    • Running tests
+    • Building the library
+    • Publishing to npm
+
+  Quick reference:
+    📖 README.md           - Main documentation
+    📖 SETUP.md            - Detailed setup guide
+    📖 NEXT_STEPS.md       - What to do next
+    📖 CONTRIBUTING.md     - Contribution guide
+    📖 PROJECT_SUMMARY.md  - Project overview
+
+
+QUICK COMMANDS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+  Development:
+    pnpm dev:docs         Start Storybook
+    pnpm dev              Start dev server
+    pnpm test:watch       Run tests in watch mode
+
+  Building:
+    pnpm build            Build component library
+    pnpm build:docs       Build Storybook
+
+  Testing:
+    pnpm test             Run all tests
+    pnpm test:coverage    Run with coverage
+
+  Code Quality:
+    pnpm lint             Lint code
+    pnpm format           Format code
+
+
+╔══════════════════════════════════════════════════════════════════════════╗
+║                    🎉 Happy coding! 🚀                                    ║
+╚══════════════════════════════════════════════════════════════════════════╝

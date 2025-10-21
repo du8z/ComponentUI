@@ -1,0 +1,122 @@
+import { Meta } from '@storybook/blocks'
+
+<Meta title="Introduction" />
+
+# ComponentUI
+
+<div className="sb-container">
+  <div className='sb-section-title'>
+    # Welcome to ComponentUI
+
+    A modern, accessible, and customizable React component library built with TypeScript and Tailwind CSS.
+  </div>
+
+  <div className="sb-section">
+    ## Features
+
+    - **TypeScript First**: Fully typed components with excellent IntelliSense support
+    - **Tailwind CSS**: Utility-first styling for easy customization
+    - **Accessibility**: WCAG AA compliant components with full ARIA support
+    - **Tree-shakeable**: Import only what you need for optimal bundle size
+    - **Dark Mode**: Built-in dark mode support for all components
+    - **Fully Tested**: Comprehensive test coverage with Vitest and React Testing Library
+    - **Well Documented**: Detailed documentation with live examples in Storybook
+  </div>
+
+  <div className="sb-section">
+    ## Getting Started
+
+    ### Installation
+
+    ```bash
+    npm install @componentui/ui
+    # or
+    pnpm add @componentui/ui
+    # or
+    yarn add @componentui/ui
+    ```
+
+    ### Basic Usage
+
+    ```tsx
+    import { Button } from '@componentui/ui'
+    import '@componentui/ui/styles.css'
+
+    function App() {
+      return (
+        <Button variant="primary" size="md">
+          Click me
+        </Button>
+      )
+    }
+    ```
+  </div>
+
+  <div className="sb-section">
+    ## Component Categories
+
+    ### Base Components
+    - Button
+    - Input
+    - Card
+    - Badge
+    - Avatar
+
+    ### Feedback Components
+    - Alert
+    - Toast
+    - Spinner
+    - Modal
+
+    ### Form Components
+    - Checkbox
+    - Select
+    - Radio
+
+    ### Navigation
+    - Tabs
+    - Pagination
+
+    ### Data Display
+    - Accordion
+    - Tooltip
+  </div>
+
+  <div className="sb-section">
+    ## Design Principles
+
+    1. **Accessibility First**: Every component is built with accessibility in mind
+    2. **Composable**: Components are designed to work together seamlessly
+    3. **Customizable**: Easy to customize with Tailwind classes or CSS variables
+    4. **Performance**: Optimized for performance with minimal re-renders
+    5. **Developer Experience**: Great TypeScript support and clear documentation
+  </div>
+
+  <div className="sb-section">
+    ## Contributing
+
+    We welcome contributions! Please see our [Contributing Guide](https://github.com/yourusername/componentui/blob/main/CONTRIBUTING.md) for details.
+
+    ## License
+
+    MIT © [Your Name]
+  </div>
+</div>
+
+<style>
+  {`
+  .sb-container {
+    margin-bottom: 48px;
+  }
+
+  .sb-section {
+    margin-bottom: 32px;
+  }
+
+  .sb-section-title {
+    margin-bottom: 32px;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 16px;
+  }
+  `}
+</style>

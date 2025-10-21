@@ -1,0 +1,42 @@
+{
+  "name": "@componentui/monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A modern React component library built with TypeScript, Tailwind CSS, and Storybook",
+  "keywords": [
+    "react",
+    "components",
+    "ui",
+    "design-system",
+    "typescript",
+    "tailwind"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "packageManager": "pnpm@8.15.0",
+  "scripts": {
+    "dev": "pnpm --filter @componentui/ui dev",
+    "dev:docs": "pnpm --filter @componentui/docs storybook",
+    "build": "pnpm --filter @componentui/ui build",
+    "build:docs": "pnpm --filter @componentui/docs build-storybook",
+    "test": "pnpm -r test",
+    "test:coverage": "pnpm -r test:coverage",
+    "test:watch": "pnpm -r test:watch",
+    "lint": "pnpm -r lint",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,md}\"",
+    "clean": "pnpm -r clean && rm -rf node_modules",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "prettier": "^3.2.4",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "typescript": "^5.3.3"
+  }
+}

@@ -1,0 +1,280 @@
+import { Meta } from '@storybook/blocks'
+
+<Meta title="Getting Started" />
+
+# Getting Started
+
+Welcome to the ComponentUI component library! This guide will help you integrate our components into your React application.
+
+## Installation
+
+Install the package using your preferred package manager:
+
+```bash
+# npm
+npm install @componentui/ui
+
+# pnpm
+pnpm add @componentui/ui
+
+# yarn
+yarn add @componentui/ui
+```
+
+## Setup
+
+### 1. Import Styles
+
+Import the CSS file in your application's entry point:
+
+```tsx
+// main.tsx or App.tsx
+import '@componentui/ui/styles.css'
+```
+
+### 2. Configure Tailwind CSS (Optional)
+
+If you're using Tailwind CSS in your project, you can extend our configuration:
+
+```js
+// tailwind.config.js
+module.exports = {
+  content: [
+    './src/**/*.{js,ts,jsx,tsx}',
+    './node_modules/@componentui/ui/dist/**/*.js',
+  ],
+  theme: {
+    extend: {
+      // Your custom theme
+    },
+  },
+}
+```
+
+## Basic Usage
+
+Import and use components in your React application:
+
+```tsx
+import { Button, Input, Card } from '@componentui/ui'
+
+function MyApp() {
+  return (
+    <div>
+      <Card>
+        <Card.Header>
+          <h2>Login</h2>
+        </Card.Header>
+        <Card.Body>
+          <Input
+            type="email"
+            placeholder="Email"
+            label="Email Address"
+          />
+          <Input
+            type="password"
+            placeholder="Password"
+            label="Password"
+          />
+        </Card.Body>
+        <Card.Footer>
+          <Button variant="primary" size="md">
+            Sign In
+          </Button>
+        </Card.Footer>
+      </Card>
+    </div>
+  )
+}
+```
+
+## TypeScript Support
+
+All components are fully typed. Import types for better development experience:
+
+```tsx
+import { Button, type ButtonProps } from '@componentui/ui'
+
+const CustomButton: React.FC<ButtonProps> = (props) => {
+  return <Button {...props} />
+}
+```
+
+## Dark Mode
+
+Enable dark mode by adding the `dark` class to your root element:
+
+```tsx
+// Toggle dark mode
+function App() {
+  const [isDark, setIsDark] = useState(false)
+
+  useEffect(() => {
+    if (isDark) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  }, [isDark])
+
+  return (
+    <div>
+      <button onClick={() => setIsDark(!isDark)}>
+        Toggle Dark Mode
+      </button>
+      {/* Your components */}
+    </div>
+  )
+}
+```
+
+## Customization
+
+### Using className
+
+Add custom styles using the `className` prop:
+
+```tsx
+<Button
+  variant="primary"
+  className="mt-4 shadow-lg"
+>
+  Custom Button
+</Button>
+```
+
+### Using Tailwind Utilities
+
+All components support Tailwind CSS utility classes:
+
+```tsx
+<Input
+  label="Name"
+  className="w-full max-w-md"
+/>
+```
+
+## Best Practices
+
+### 1. Accessibility
+
+All components are designed with accessibility in mind:
+- Proper ARIA attributes
+- Keyboard navigation support
+- Screen reader friendly
+
+```tsx
+<Button aria-label="Close dialog" onClick={handleClose}>
+  ×
+</Button>
+```
+
+### 2. Performance
+
+Import only what you need for better tree-shaking:
+
+```tsx
+// ✅ Good - Named imports
+import { Button, Input } from '@componentui/ui'
+
+// ❌ Avoid - Default import
+import ComponentUI from '@componentui/ui'
+```
+
+### 3. Form Handling
+
+Use controlled components for forms:
+
+```tsx
+function MyForm() {
+  const [email, setEmail] = useState('')
+
+  return (
+    <Input
+      type="email"
+      value={email}
+      onChange={(e) => setEmail(e.target.value)}
+      label="Email"
+    />
+  )
+}
+```
+
+## Examples
+
+### Login Form
+
+```tsx
+import { Button, Input, Card, Alert } from '@componentui/ui'
+
+function LoginForm() {
+  const [error, setError] = useState('')
+
+  return (
+    <Card className="max-w-md mx-auto">
+      <Card.Header>
+        <h2 className="text-2xl font-bold">Welcome Back</h2>
+      </Card.Header>
+      <Card.Body>
+        {error && <Alert type="error">{error}</Alert>}
+        <Input
+          type="email"
+          label="Email"
+          placeholder="you@example.com"
+        />
+        <Input
+          type="password"
+          label="Password"
+          placeholder="••••••••"
+        />
+      </Card.Body>
+      <Card.Footer>
+        <Button variant="primary" className="w-full">
+          Sign In
+        </Button>
+      </Card.Footer>
+    </Card>
+  )
+}
+```
+
+### User Profile
+
+```tsx
+import { Avatar, Badge, Button } from '@componentui/ui'
+
+function UserProfile() {
+  return (
+    <div className="flex items-center gap-4">
+      <Avatar
+        src="/user.jpg"
+        alt="John Doe"
+        size="lg"
+        status="online"
+      />
+      <div>
+        <h3 className="font-semibold">John Doe</h3>
+        <Badge variant="success">Active</Badge>
+      </div>
+      <Button variant="ghost" size="sm">
+        Edit Profile
+      </Button>
+    </div>
+  )
+}
+```
+
+## Next Steps
+
+- 📖 Browse component documentation in the sidebar
+- 🎨 Check out component variants and examples
+- ♿ Learn about accessibility features
+- 💡 See best practices for each component
+
+## Support
+
+- **Documentation**: Browse the components in this Storybook
+- **GitHub**: Report issues or contribute
+- **Community**: Join our discussions
+
+Happy coding! 🚀

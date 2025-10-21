@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(rm:*)",
+      "Bash(pnpm:*)",
+      "Bash(npm --version:*)",
+      "Bash(chmod:*)",
+      "Bash(for dir in Button Input Card Badge Avatar Modal Alert Tooltip Checkbox Select Tabs Accordion Pagination Toast Spinner)",
+      "Bash(do)",
+      "Bash(done)",
+      "Bash(find:*)",
+      "Bash(npm test:*)",
+      "Bash(wc:*)",
+      "Bash(npx tsc:*)",
+      "Bash(cat:*)",
+      "Bash(git init:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
