@@ -1,15 +1,36 @@
 # ComponentUI
 
-[![npm version](https://img.shields.io/npm/v/@componentui/ui.svg?style=flat-square)](https://www.npmjs.com/package/@componentui/ui)
-[![npm downloads](https://img.shields.io/npm/dm/@componentui/ui.svg?style=flat-square)](https://www.npmjs.com/package/@componentui/ui)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square)](LICENSE)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.3-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-18-blue?style=flat-square&logo=react)](https://reactjs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-blue?style=flat-square&logo=tailwindcss)](https://tailwindcss.com/)
 [![Storybook](https://img.shields.io/badge/Storybook-7.6-pink?style=flat-square&logo=storybook)](https://storybook.js.org/)
-[![Test Coverage](https://img.shields.io/badge/coverage-80%25-green?style=flat-square)](/)
+[![Test Coverage](https://img.shields.io/badge/coverage-93%25-green?style=flat-square)](/)
+[![Version](https://img.shields.io/badge/version-0.1.0-blue?style=flat-square)](https://github.com/du8z/ComponentUI)
 
 > A modern, accessible, and customizable React component library built with TypeScript and Tailwind CSS.
+
+## 📚 Table of Contents
+
+- [Features](#features)
+- [Installation](#installation)
+- [Quick Start](#quick-start)
+- [Available Components](#available-components)
+- [Documentation](#documentation)
+- [Development](#development)
+  - [Prerequisites](#prerequisites)
+  - [Getting Started](#getting-started)
+  - [Scripts](#scripts)
+- [Project Structure](#project-structure)
+- [Contributing](#contributing)
+  - [Development Workflow](#development-workflow)
+  - [Commit Convention](#commit-convention)
+- [Testing](#testing)
+- [Browser Support](#browser-support)
+- [Technology Stack](#technology-stack)
+- [Roadmap](#roadmap)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
 
 ## Features
 
