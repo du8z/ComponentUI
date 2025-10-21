@@ -76,8 +76,9 @@ describe('Input', () => {
     })
 
     it('should render password type', () => {
-      render(<Input type="password" />)
-      const input = screen.getByRole('textbox', { hidden: true })
+      const { container } = render(<Input type="password" />)
+      const input = container.querySelector('input[type="password"]')
+      expect(input).toBeInTheDocument()
       expect(input).toHaveAttribute('type', 'password')
     })
 

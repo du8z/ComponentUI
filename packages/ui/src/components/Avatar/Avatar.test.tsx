@@ -33,9 +33,10 @@ describe('Avatar', () => {
     })
 
     it('should use default alt text when neither alt nor name is provided', () => {
-      render(<Avatar src="/avatar.jpg" />)
-      const container = screen.getByRole('img')
-      expect(container).toHaveAttribute('aria-label', 'Avatar')
+      const { container } = render(<Avatar src="/avatar.jpg" />)
+      const avatarDiv = container.querySelector('[role="img"][aria-label="Avatar"]')
+      expect(avatarDiv).toBeInTheDocument()
+      expect(avatarDiv).toHaveAttribute('aria-label', 'Avatar')
     })
 
     it('should forward ref to div element', () => {
